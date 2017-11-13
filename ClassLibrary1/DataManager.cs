@@ -93,6 +93,7 @@ namespace ClassLibrary1
             var connection = new SqlConnection("Data Source=DESKTOP-S3O5AOR;Initial Catalog=KafeYonetim;Integrated Security=True");
             connection.Open();
             var command = new SqlCommand($"insert into urunler ([Ad],[Fiyat],[StoktaVarMi]) Values ('{UrunAdi}','{UrunFiyati}','{Stok}')", connection);
+           // var command2 = new SqlCommand($"insert into urunler(Ad,Fiyat,StoktaVarMi) values(@urunad,@urunfiyat@stok)",connection);
             
             var result=command.ExecuteNonQuery();
             if (result > 0)
@@ -105,5 +106,6 @@ namespace ClassLibrary1
             }
             connection.Close();
         }
+       
     }
 }
