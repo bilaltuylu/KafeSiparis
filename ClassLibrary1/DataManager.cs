@@ -78,6 +78,8 @@ namespace ClassLibrary1
                 Console.WriteLine($"{fiyat}dan fazla olanlar{result["ad"]}");
                 
             }
+            result.Close();
+            connection.Close();
         }
         public void UrunGiris()
         {
